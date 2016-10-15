@@ -1,8 +1,11 @@
 <div id='container'>
   <!-- Your html here -->
   <div ng-controller="LinksController">
+    <form>
+      <input ng-model='searchUrl' class='text' type='text' name='url'>
+    </form>
     <ul>
-      <li ng-repeat="link in data.links | orderBy:'-visits'" class="link">
+      <li ng-repeat="link in data.links | filter:searchUrl | orderBy:'-visits'" class="link">
         <img src='assets/redirect_icon.png'/>
         <div class='info'>
           <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
