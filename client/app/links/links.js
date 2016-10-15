@@ -4,11 +4,7 @@ angular.module('shortly.links', [])
   // Your code here
   $scope.data = {};
 
-  if (Auth.isAuth()) {
-    Links.getAll().then(function(resp) {
-      $scope.data.links = resp;
-    });
-  } else {
-    $location.path('/signin');
-  }
+  Links.getAll().then(function(resp) {
+    $scope.data.links = resp;
+  });
 });

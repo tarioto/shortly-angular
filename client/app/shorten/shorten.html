@@ -2,11 +2,9 @@
 <!-- Your code here -->
   <div ng-controller="ShortenController">
     <form>
-      <input ng-model="string" class='text' type='text' name='url'>
-      <input ng-click="addLink(string)" type='submit' value='Shorten'>
+      <input ng-model="link.url" class='text' type='text' name='url'>
+      <input ng-click="addLink(link)" type='submit' value='Shorten'>
     </form>
     <img class='spinner' src='assets/spiffygif_46x46.gif'>
   </div>
 </div>
-
-
